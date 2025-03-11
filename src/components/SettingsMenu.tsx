@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Switch, ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import Settings from '@mui/icons-material/Settings';
 import { DarkMode, LightMode } from '@mui/icons-material';
 
@@ -8,8 +8,6 @@ interface SettingsMenuProps {
   setDarkMode: (value: boolean) => void;
   addSecondsToTimer: (seconds: number) => void;
   setFontSize: (cb: (prev: number) => number) => void;
-  embedOverflow: boolean;
-  setEmbedOverflow: (value: boolean) => void;
   isSetupMode: boolean;  // Add this prop
 }
 
@@ -18,8 +16,6 @@ export const SettingsMenu = ({
   setDarkMode,
   addSecondsToTimer,
   setFontSize,
-  embedOverflow,
-  setEmbedOverflow,
   isSetupMode
 }: SettingsMenuProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -90,15 +86,6 @@ export const SettingsMenu = ({
               </Button>
             </div>
             </div>
-
-          <div className="flex items-center justify-between">
-            <span>Embedding overflow</span>
-            <Switch
-              checked={embedOverflow}
-              onChange={(e) => setEmbedOverflow(e.target.checked)}
-              color="primary"
-            />
-          </div>
 
           <div className="flex items-center justify-between">
             <span>Adjust Timer</span>

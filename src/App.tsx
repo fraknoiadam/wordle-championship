@@ -18,7 +18,6 @@ const CountdownTimer = () => {
   const [embedFadeOutSec, setEmbedFadeOutSec] = useState(0);
   const timerRef = useRef<HTMLDivElement>(null);
   const [timerHeight, setTimerHeight] = useState(0);
-  const [embedOverflow, setEmbedOverflow] = useState(true);
 
   const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(90*60*1000);
   const remainingSeconds = time.seconds+time.minutes*60+time.hours*3600;
@@ -93,8 +92,6 @@ const CountdownTimer = () => {
           setDarkMode={setDarkMode}
           addSecondsToTimer={addSecondsToTimer}
           setFontSize={setFontSize}
-          embedOverflow={embedOverflow}
-          setEmbedOverflow={setEmbedOverflow}
           isSetupMode={showForm}  // Add this prop
         />
 
@@ -118,7 +115,6 @@ const CountdownTimer = () => {
               links={links} 
               animationPauseTime={linkSwitchDurationSec} 
               timerHeight={timerHeight}
-              embedOverflow={embedOverflow}
             />
             </div>
         )}

@@ -4,14 +4,12 @@ interface ContentEmbedProps {
   links: string[];
   animationPauseTime: number;
   timerHeight: number;
-  embedOverflow: boolean;
 }
 
 export const ContentEmbed = ({ 
   links, 
   animationPauseTime,
   timerHeight,
-  embedOverflow
 }: ContentEmbedProps) => {
     const [currentLink, setCurrentLink] = useState(0);
 
@@ -28,7 +26,7 @@ export const ContentEmbed = ({
     if (!links[0]) return null;
 
     return (
-    <div className="flex-1 relative mx-10">
+    <div className="flex-1 relative">
       {links.map((link, index) => (
       <div
         key={index}
@@ -37,7 +35,7 @@ export const ContentEmbed = ({
         }`}
         // Pointer events allows to click on the current iframe (not on the hidden ones).
         style={{ 
-        height: `calc(100vh - ${timerHeight}px + ${embedOverflow ? 50 : 0}px)` // 50px for hide
+        height: `calc(100vh - ${timerHeight}px)`,
         }}
       >
         <iframe
