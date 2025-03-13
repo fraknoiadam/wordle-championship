@@ -6,7 +6,9 @@ import { ContentEmbed } from './components/ContentEmbed';
 import { useTimer } from './hooks/useTimer';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Button from '@mui/material/Button'; // Add this import
 import { lightTheme, darkTheme } from './theme';
+import { embeddingsList } from './data/embeddings';
 
 const CountdownTimer = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -18,15 +20,18 @@ const CountdownTimer = () => {
   const [embedFadeOutSec, setEmbedFadeOutSec] = useState(0);
   const timerRef = useRef<HTMLDivElement>(null);
   const [timerHeight, setTimerHeight] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentEmbedding = embeddingsList[currentIndex];
+  const [numberOfSuccess , setNumberOfSuccess] = useState(0);
   const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(90*60*1000);
   const remainingSeconds = time.seconds+time.minutes*60+time.hours*3600;
 
-  const processSetupFormSubmission = (newLinks: string[], linkSwitchDurationSec: number, embedFadeOutSec: number) => {
-    setLinks(newLinks);
-    setLinkSwitchDurationSec(linkSwitchDurationSec);
+  const processSetupFormSubmission = () => {
     setShowForm(false);
-    setEmbedFadeOutSec(embedFadeOutSec);
+    // Start the timer when form is submitted
+    if (paused) {
+      toggleTimer();
+    }
     
     // Request fullscreen on form submission
     try {
@@ -34,6 +39,11 @@ const CountdownTimer = () => {
     } catch (error) {
       console.warn('Failed to enter fullscreen mode:', error);
     }
+  };
+
+  const handleNextEmbedding = (success: boolean) => {
+    setNumberOfSuccess(success ? numberOfSuccess+1 : numberOfSuccess);
+    setCurrentIndex((prevIndex) => (prevIndex + 1));
   };
 
   useEffect(() => {
@@ -86,7 +96,7 @@ const CountdownTimer = () => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <div className="h-screen w-screen overflow-hidden">
+      <div className="h-screen w-screen overflow-hidden" style={{ backgroundColor: currentEmbedding.color }}>
         <SettingsMenu
           darkMode={darkMode}
           setDarkMode={setDarkMode}
@@ -101,15 +111,14 @@ const CountdownTimer = () => {
             isPaused={paused}
             fontSize={fontSize}
             marginBottom={marginBottom}
-            onClick={toggleTimer}
+            /*onClick={toggleTimer}*/
           />
-        </div>
 
         {showForm && <TimerSetupForm
           onStart={processSetupFormSubmission} 
         />}
 
-        {!showForm && remainingSeconds > embedFadeOutSec-5 && (
+        {/* {!showForm && remainingSeconds > embedFadeOutSec-5 && (
             <div className={`transition-opacity ease-out duration-4000 ${remainingSeconds < embedFadeOutSec ? 'opacity-0' : 'opacity-100'}`}>
             <ContentEmbed 
               links={links} 
@@ -117,7 +126,48 @@ const CountdownTimer = () => {
               timerHeight={timerHeight}
             />
             </div>
-        )}
+        )} */}
+        {!showForm && <div>
+          <h1>{currentIndex+1}. játék: {currentEmbedding.title}</h1>
+          <Button 
+            variant="contained" 
+            onClick={() => handleNextEmbedding(true)}
+            color="success"
+          >
+            Sikerült a feladat
+          </Button>
+          <Button 
+            variant="contained" 
+            onClick={() => handleNextEmbedding(false)}
+            color="error"
+          >
+            Nem sikerült, vagy átugrom a pályát.
+          </Button>
+
+
+          <p>Eddig {numberOfSuccess} sikeres és {currentIndex - numberOfSuccess} sikertelen próbálkozásod volt.</p>
+
+          <p>{currentEmbedding.text}</p>
+
+          <p>Ha nem töltene be az oldal, akkor kattints ide: <a href
+          ={currentEmbedding.link}>{currentEmbedding.link}</a></p>
+        </div>}
+        </div>
+      
+        {!showForm &&
+        <div
+          style={{ 
+            height: `calc(100vh - ${timerHeight}px)`,
+          }}
+        >
+          <iframe 
+            src={currentEmbedding.link} 
+            width="100%"
+            height="100%"
+            title={currentEmbedding.title}
+          ></iframe>
+        </div>
+        }
 
       </div>
     </ThemeProvider>
