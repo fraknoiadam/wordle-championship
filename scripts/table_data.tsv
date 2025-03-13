@@ -1,0 +1,123 @@
+Pálya	link	szöveg	háttérszín
+Wordle	https://wordleunlimited.org/	A bajnokságot kezdjük az eredeti Wordle játékkal! Egy 5 betűs angol szót kell kitalálni, a játék minden tipp után elmondja az összes betűről, hogy melyikek vannak benne a szóban és ezek közül melyek van jó helyen. Sok sikert!	#ffff00
+Wordle2	https://wordleplay.com/wordle-2	A feladat itt ugyanaz, mint az előbb, de most egy 6 betűs angol szót kell kitalálnod.	#ffff00
+Septle	https://septle.com/	Most pedig egy 7 betűset.	#ffff00
+Wordemy	https://gamesrow.com/wordemy	Na jó, ahelyett, hogy a betűszámot növelnénk, kezdjünk el lefelé haladni! Itt egy 4 betűs szót kell kitalálnod.	#ffff00
+Thirdle	https://web-dev-dan.github.io/Thirdle/	Itt pedig egy 3 betűset, de csak 3 tipped van. A narancssárga szín jelzi, hogy egy betű szerepel a megoldásban, csak rossz helyen, a kék pedig azt, ha jó helyen is van.	#ffff00
+Letterle	https://wordgames.gg/letterle	Itt pedig egy 1 betűs szót… De korlátlan tippből!	#ffff00
+Shuntle	https://shuntle.com/?unlimited	Kicsit változtassunk a formulán! Ebben a verzióban nem tudod hány betűből áll a megfejtés. A megfejtésben a szó előtt és után is lehetnek szóközök, ezek szintén tippelhető karakterek, melyekről az oldal elárulja ugyanúgy, hogy szerepelnek-e a megfejtésben és ha igen, akkor hol.	#ffff00
+Szó reggelt!	https://jealousmarkup.xyz/szofejto/	Vagy inkább szó estét? Lényegében Wordle, csak magyarul. A piros szín azt jelzi, ha egy betű szerepel a szóban csak máshol.	#ffff00
+Szózat	https://szozat.miklosdanka.com/	Olyan, mint a Szó reggelt!, de itt a több karakterből álló betűk csak egy helyet foglalnak csak el.	#ffff00
+Murdle	https://wordleunlimited.io/murdle	Gratulálok! Eljutottál a 10. pályához!   Ebben a verzióban nem a tippjeid száma van korlátozva, hanem az, hogy hány betűt tippelhetsz, ami nem szerepel a megfejtésben. Ha betippelsz 10 ilyet, akkor fel leszel akasztva! Halott betűt lehet újra tippelni életvesztés nélkül!	#ffff00
+Hardle	https://hardle.org/	Ez olyan, mint a Wordle (gondoltad volna?), csak nehezebb! Itt a játék csak azt írja ki, hogy hány jól tippelt betű van, azt nem, hogy melyikek.	#ffff00
+Reversle	https://reversle.net/	Háhá! Most megfordult a játék! Tudod, hogy mi a megfejtés és, hogy a tippekre érkezett válaszokat. Ezek alapján kell kitalálnod, hogy vajon mik lehettek a tippek.	#ffff00
+Unwordle	https://unwordle.org/?daily=1	Olyan, mint a Reversle, csak nehezebb. Itt még arra is kell figyelned, hogy minden tipp egy olyan szó legyen, ami az őt megelőző információk alapján akár a megfjtés is lehetett volna. Kérlek menj az Unlimited verzióban a Normalre!	#ffff00
+Dordle	https://dordlewordle.com/	Ebben a verzióban párhuzamosan kell kitalálnod két szót.	#ffff00
+Xordle	https://xordle.org/	Na, szóval ezt nehéz lesz elmagyarázni… Szóval itt is két kitalálandó szó van, de ezekre a játék párhuzamosan válaszol. Lényegében azt jeleníti meg, hogy van-e olyan szó, amiben egy adott betű szerepel. Tehát ha például az egyik szóban nem szerepel E, de a másikban igen és a tippedben is, akkor a játék narancssárgát, vagy zöldet fog jelezni (attól függően, hogy a helye jó-e). Ha az egyik szót kitaláltad, kapsz egy extra tipplehetőséget és onnantól a játék úgy megy tovább, mint a sima Wordle.	#ffff00
+Invisidle	https://www.chigozie.co.uk/invisidle/	Az eredeti Wordle-höz nagyon hasonlít, de itt nem látod a korábbi tippjeidet.	#ffff00
+Riddlele	https://www.fuedle.com/riddlele/unlimited	Ebben a Wordle-játékban meg van adva egy riddle és annak a megfejtését kell kitalálni.	#ffff00
+Adoptle	https://wordly.org/wordle-games/adoptle	Olyan, mint a Wordle (továbbra is… az elrugaszkodott verziók még messze vannak), a fő különbség az, hogy a megfejtés adoptálható. Többnyire egy állat tulajdonneve.	#ffff00
+Birdle	https://birdle.escism.net/	Olyan, mint az Adoptle, de a megfejtés mindig egy madár neve.	#ffff00
+Phoodle	https://www.phoodle.net/	Üdvözöllek a 20. pályán! Itt egy ételt kell kitalálnod.	#ffff00
+Horsle	https://horsle.glitch.me/	Itt pedig mindig az a megfejtés, hogy "Horse".	#ffff00
+Easy Wordle	https://www.easywordle.com/	Easy Wordle. Olyan, mint a Wordle, csak Easy. Hajrá!	#ffff00
+Abrsurdle	https://absurdle.online/	Na igen, az előző könnyű volt… Itt a tökéletes ellenkezője történik. A játék minden tipped után újraválassza a megfejtést úgy, hogy a lehető legtöbb tippre legyen szükséged a kitalálásához. Olyan, mint az gonosz ellenfél a Barkóbában!	#ffff00
+Passwordle	https://passwordle.com/	Találd ki a jelszót. Szerintem ez a legnehezebb pálya az egész játékban.	#ffff00
+Don't Wordle	https://dontwordle.com/	Itt az a feladat, hogy ne találd ki a megfejtést 6 tippből! Kizárólag olyat tippelhetsz, ami a korábbi ismereteid alapján még lehetne a megfejtés. Az 5 undo használata engedélyezett a bajnokságon.	#ffff00
+Fibble	https://fibble.xyz/?unlimited	Itt pedig soronként egy betűről hazudik neked a játék, a zászlókkal meg tudod jelölni soronként, hogy szerinted melyik volt a hazugság. Tulajdonképpen ki találja ki ezeket?	#ffff00
+Trordle	https://wordle-unlimited.io/game/trordle/	Emlékszel a Dordle-re? Na, ez ugyanolyan, csak 3 szóval. A játék megnyitása után kattints a "free trordle+" gombra!	#ffff00
+Quordle	https://www.merriam-webster.com/games/quordle/#/practice	Ez pedig 4-gyel.	#ffff00
+Hexordle	https://hexordle.com/?mode=free	Ez pedig 6-tal… A játék megnyitása után kattints a "free hexordle" gombra!	#ffff00
+Sixordle	https://sixordle.com/practice	30. pálya! Ennek örömére ismét 6 szót kell kitalálnod párhuzamosan, de ezek 6 betűsek.	#ffff00
+Octordle	https://octordle.org/	8 darab 5 betűs szó!!! Ígérem nem lesz ennél sokkal több.	#ffff00
+Decordle	https://www.opensourcefeed.org/puzzles/decordle/?source=landing	Ultimate párhuzamos Wordle teszt! 10 szó egyszerre! Sok sikert! Ez az utolsó ezek közül.	#00b050
+Letroso	https://letroso.com/en/unlimited	Az előbbi pályával végigértél a hagyományos szókitalálós Wordle játékokon! Innentől az alternatív szókitalálós játékok jönnek egy darabig! Kezdésként Letroso! Hajrá!	#00b050
+Crosswordle	https://crosswordle.com/practice	Ebben a változatban betűket kell cserélgetned egy keresztrejtvényben úgy, hogy minden szó kijöjjön még azelőtt, hogy kifogynál a cserékből. A sárga szín azt jelenti, hogy egy adott betű jó oszlopban, vagy jó sorban van, de nem jó helyen.	#00b050
+Waffle	https://wafflegame.net/daily	Ugyanaz, mint Crosswordle, csak gofri!	#00b050
+Deluxe Waffle	https://wafflegame.net/deluxe	Ugyanaz, mint Waffle, csak nagyobb gofri! Akármit is írjon a játék, itt korlátlan mennyiségű tipped van.	#00b050
+Thirdle	https://thirdle.org/unl	Thirdle? Ez nem volt már korábban? Ja… ez egy másik. Mi lesz a következő, egy második Birdle? Ebben a változatban 3 szót kell kitalálnod, amik egy keresztrejtvényben vannak elhelyezve. A lila szín azt jelenti, hogy a tippelt betű szerepel egy másik szóban, mint ahová tippeltél. A narancssárga azt, hogy a megfelelő szóban, csak másik helyen. A zöld pedig azt, hogy jó helyre tippeltél.	#00b050
+Squareword	https://squareword.org/	Squareword: Tippelsz szavakat és ha a kitalálandó 5 szó valamelyikében jó pozícióban is van a tippedben szereplő valamelyik betű, akkor azt be is írja! Továbbá megjeleníti az utolsó oszlopban a rossz pozícióban lévő betűket.	#00b050
+Warmle	https://warmle.org/?unlimited	Ebben a játékban azt tudod a betippelt szó betűiről, hogy azok az a megfejtésben azonos helyen lévő betűkhöz közel vannak-e az ábécében. Arról nincs infód, hogy egy adott betű más pozícióba jó-e.	#00b050
+Super Warmle	https://warmle.org/?unlimited&warm=2	Már a 40. pályánál tartasz!!! Kíváncsi vagyok eljut-e majd bárki ide… És ha igen, akkor mennyi idő után…  Ez a játék ugyanaz, mint Warmle, csak közelebb kell lennie a tippelt betűnek a megfejtésnek ahhoz, hogy warmnak számítson.	#00b050
+Super Warmle PLUS	https://warmle.org/?unlimited&warm=1	Super Warmle, csak nehezebb.	#00b050
+Semantle	https://semantle.com/	Akármilyen szót tippelhetsz. A játék minden tippedről elárulja, hogy mennyire hasonlít a kitalálandó szóra (szóalak szempontjából).	#00b050
+Contexto	https://contexto.me/	Olyan, mint Semantle, csak itt nem a szóalak, hanem a jelentés számít.	#00b050
+Shuffle	https://nerdlegame.com/s/shuffle/abcd?gp=&st=90	Itt a sorokban és az oszlopokban szereplő, még rossz helyen lévő betűket tudod mozgatni. Ha egy rossz helyen lévő betű egyedüli marad a sorában és az oszlopában is, akkor alul a lakattal tudod feloldani a többi betűt.	#00b050
+Searchle	https://searchle.net/	Hogyan egészíti ki a Google automatikusan a keresést? Wordle-szerűen kell kitalálnod.	#00b050
+Feudle	https://www.fuedle.com/unlimited	Őszintén szólva nem tudom miben különbözik ez a Searchle-től, de elvileg más.	#00b050
+Periodle	https://wordgames.gg/periodle	Itt a periódusos rendszerben szereplő vegyjelekből kell szavakat alkotnod! Igen, ez a játék létezik.	#00b050
+Double-Dabble	https://wordleunlimitedgame.io/double-dabble	Utolsó játék az alternatív szókitalálós részről! Itt párokban vannak a betűk, amiket tippelhetsz és a játék azt árulja el, hogy legalább az egyik a párból szerepel-e a szóban. A 32 betűkombináció közül, ami a tippedből kijöhet, legalább egynek értelmesnek kell lennie.	#ffff00
+Sedecordle	https://www.sedecordle.com/?mode=free	Emlékszel, amikor azt mondtam, hogy 10-nél több szót nem kell kitalálnod párhuzamosan… Nos hazudtam, itt 16-ot kell!!! De ígérem, ez már tényleg az utolsó.	#ff0000
+Numberle	https://dduarte.github.io/numberle/	Hihetetlen vagy! Eljutottál az 50. pályára. Az előzőt átugrottad, igaz? Mindegy… Beértél a matekos részlegre, most egy darabig matek feladványok lesznek. Jó szórakozást hozzájuk!  Numberle: Találd ki az 5-jegyű számot Wordle-szerűen.	#ff0000
+Primel	https://cojofra.github.io/primel/	Olyan, mint a Numberle, azzal a különbséggel, hogy itt a megfejtés mindig egy prímszám.	#ff0000
+Bytle	https://jamesl.me/bytle/	Olyan, mint a Numberle, csak itt 2-es számrendszerben dolgozol.	#ff0000
+Hexle	https://jamesl.me/hexle/	Itt pedig 16-osban.	#ff0000
+Numble	https://numble.wtf/	Itt a jobb felső sarokban szereplő számot kell kiíratnod kizárólag a lenti számokat és műveleteket használva.	#ff0000
+Segmentle Easy	https://segmentle.com	Olyan, mint Waffle, csak itt úgy kell cserélgetned, hogy minden oszlopban a fent látható szám legyen az összeg. (A sorokban nem kell annak lennie.)	#ff0000
+Segmentle Medium	https://segmentle.com/daily4x4	Ugyanaz, mint az előbb, csak 4x4-es a négyzet.	#ff0000
+Segmentle Hard	https://segmentle.com/daily5x5	Itt pedig 5x5-ös.	#ff0000
+Mathler Easy	https://www.mathler.com/easy	Itt azt kell kitalálnod, hogy mi az a műveletsor, aminek a fent látható szám a végeredménye.	#ff0000
+Micro Nerdle	https://micro.nerdlegame.com/game?v=2025028007	Olyan, mint a Mathler, de itt a teljes műveletsort neked kell kitalálni az eredménnyel együtt. A kommutatív műveleteket felcserélve is elfogadja a játék az eredményt.	#ff0000
+Mini Nerdle	https://mini.nerdlegame.com/game	60. pálya. Nem tudom mit tudnék még írni…  Itt ugyanaz a feladat, mint az előbb, csak 5 helyett 6 jegyből áll a műveletsor.	#ff0000
+Mathler	https://www.mathler.com/normal	Mathler 6 jeggyel.	#ff0000
+Midi Nerdle	https://midi.nerdlegame.com/game	Nerdle 7 jeggyel.	#ff0000
+Nerdle	https://nerdlegame.com/?gp=&st=25&v=2025028007	Nerdle 8 jeggyel.	#ff0000
+Numberle	https://numberle.org/	Olyan, mint a Nerdle, csak nem fogadja el a kommutatív műveletek felcserélését. Nem volt már egy másik Numberle korábban?	#ff0000
+2D nerdle	https://nerdlegame.com/s/2d/level1?gp=&st=10	Olyan, mint Waffle, de itt nem értelmes szavakat kell kapnod, hanem helyes végeredményeket.	#ff0000
+Mini bi nerdle	https://mini.bi.nerdlegame.com/game	Két 6-jegyű Nerdle párhuzamosan.	#ff0000
+Mathler Hard	https://www.mathler.com/hard	Mathler 8 jeggyel.	#ff0000
+Bi nerdle	https://bi.nerdlegame.com/game	Két 8-jegyű Nerdle párhuzamosan.	#ff0000
+Quad nerdle	https://quad.nerdlegame.com/game	Négy 8-jegyű Nerdle párhuzamosan.	#ff0000
+Instant nerdle	https://instant.nerdlegame.com/game	Eljutottál 70-hez… Te aztán kitartó vagy!  Ennek örömére itt egy nerdle, de csak 1 tipped van.	#ff0000
+Mathler Killer	https://www.mathler.com/killer	Nagyon nehéz Mathler feladvány.	#ff0000
+Maxi Nerdle	https://maxi.nerdlegame.com/game	Nagyon nehéz Nerdle feladvány.	#ff0000
+Crossnerdle	https://nerdlegame.com/crossnerdle?gp=&st=85#v=00004	Egészítsd ki a táblázatot úgy, hogy minden sorban és oszlopban igaz legyen az egyenlőség. A sor végén balra, vagy alul mindig egy szám áll és a 0, mint szám kizárólag önmagában állhat valamelyik oldalon (nem lehet vele összeadni, vagy szorozni például, de egy szám közepén számjegyként állhat).	#ff0000
+2D nerdle level 2	https://nerdlegame.com/s/2d/level2?gp=&st=95	Ha emlékszel 2D Nerdle-re, akkor ez hasonló, csak a műveleti jeleket is tudod cserélgetni és a számoknál jelezve van, hogy a sorban, vagy az oszlopban van-e jó helyen.	#ff0000
+Shuffle	https://nerdlegame.com/s/shuffle/1234?gp=&st=90	Emlékszel a Shuffle-re? Ez konkrétan ugyanaz, csak számokkal.	#ff0000
+2D nerdle level 3	https://nerdlegame.com/s/2d/level3?gp=&st=95	Utolsó matekos pálya! Itt már az sincs jelezve, hogy a sor, vagy az oszlop jó-e.	#ffff00
+Duotrigordle	https://duotrigordle.com/game/practice/normal	Hát… Emlékszel, amikor megígértem, hogy 16 szónál több nem lesz párhuzamosan? Nos, keresztben volt az ujjam… Úgyhogy most 32 következik! HAHAHA!!! (ezek után biztosan nem fogod már elhinni, hogy ez tényleg az utolsó ezekből…) A játék megnyitása után kattints a "Practice", majd a "Practice Duotrigordle" gombra!	#4472c4
+Countryle	https://www.countryle.com/	Eljutottál a földrajzos részhez. Remélem értesz a térképes dolgokhoz, különben ezen már nem fogsz túljutni… (egyáltalán hogyan nem járt még le az időd?)  Countryle-ben ki kell találnod egy országot és a játék minden tipp után elmondja, hogy jó félgömbön vagy-e és még pár extra infót.	#4472c4
+Globle	https://globle-game.com/practice	Ez olyan, mint Countryle, de itt csak azt tudod, hogy a tippelt országok milyen messze van a kitalálandó országtól.	#4472c4
+Globle Capitals	https://globle-capitals.com/practice	80. pálya! Ha eljutottál ide, kiabáld azt, hogy "Reszkessetek betörők!"  Itt a Globle-lel ellentétben, a fővárost kell kitalálnod, nem pedig az országot. A játék során repülővel utazol a városok között és a játék az utad minden pontjáról elmondja, hogy az milyen közel volt a kitalálandó fővároshoz.	#4472c4
+Flagdle	https://www.flagdle.org/	Találd ki melyik ország zászlaja van a képen.	#4472c4
+Flagle	https://flagle.gg/	Itt is a zászlót kell kitalálnod. Viszont a zászlónak csak annyi hatodát látod, ahányat addig tippeltél (kezdetben 0).	#4472c4
+Flaggle	https://www.flaggle.net/free-play/	Újabb zászlókitalálás, juhú! Itt minden tipped után azt mutatja meg a játék, hogy az általad tippelt zászló területének mely része volt átfedésben a kitalálandó zászlóéval.	#4472c4
+Worldle	https://worldle.online/	Ismert fel az országot a körvonala alapján! Minden tipped után megtudod, hogy a helyes ország melyik irányban és milyen messze van a tippedtől.	#4472c4
+Statele	https://kveez.com/en/statele-unlimited/	Olyan, mint Worldle, de itt az USA egy tagállamát kell kitalálnod.	#4472c4
+Travle	https://travle.earth/	Juss el az egyik országból a másikba kizárólag szárazföldi határokat használva!	#4472c4
+Tradle	https://tradle.net/unlimited/	Melyik ország exportját látod? A tippjeid után a játék ugyanúgy segít, mint Worldle esetén.	#4472c4
+Connectrade	https://oec.world/en/games/connectrade	Csoportosítsd az exportcikkeket aszerint, hogy melyik ország fő exporttermékei! Minden tipped után elárulja a játék a tippelt termékekről, hogy azok melyik országhoz lettek volna helyesek.	#4472c4
+Wheredle	https://wheredle.xyz/	Geoguessr-szerű játék. Találd ki melyik USA-tagállam streetviewját látod!	#4472c4
+Citydle	https://citydle.com/	90. PÁLYA!!! Úgy látom értesz a földrajzhoz is. Úgyhogy úgy érzem, hogy itt az idő, hogy befejezzük a földrajz részt ezzel a játékkal.  Ez a játék ugyanaz, mint a sima Wordle, csak városnevekkel.	#ffff00
+Sexaginta-quattuordle	https://64ordle.au/?mode=free	Na jó, talán túlzásnak hangzik, de a Sexaginta-quattuordle egy 64 szavas párhuzamos Wordle játék. Úgyis át fogod ugrani ezt, szóval fölösleges bemutatnom.	#ffc000
+Quizl	https://quizl.io/vault	Eljutottál az utolsó részleghez! Itt olyan Wordle-játékok vannak, amiket egy csoportba se tudtam beilleszteni. Jó szórakozást ezekhez!  A Quizl nevű játékban 5 trivia kérdést kell megválaszolnod. A játék addig megy, amíg mind az öt nem sikerült egymás után. A játék megnyitása után válassz ki egy random feladványt!	#ffc000
+Daydle	https://daydle.com/	Melyik évben történt a megadott esemény a megadott napon?	#ffc000
+Yeardle	https://histordle.com/yeardle/unlimited/	Melyik évben történt a megadott esemény?	#ffc000
+Songle	https://histordle.com/songle/	Melyik évben jöttek ki a megadott zenék?	#ffc000
+PopCultured	https://histordle.com/popcultured/unlimited/	Melyik évben történtek a megadott Pop-culture események?	#ffc000
+Phrazle	https://solitaired.com/phrazle	Találd ki a kifejezést Wordle-szerűen.	#ffc000
+Emojidle	https://emojidle.org/	Olyan, mint a Numberle, csak számjegyek helyett emojikkal.	#ffc000
+Birdle	https://birdle.day/	Nem volt már korábban egy másik Birdle? Vagy Thirdle? Vagy Numberle? Tulajdonképpen hány név van többször? Na mindegy, ez olyan, mint Emojidle, de kizárólag madáremojikkal. A narancssárga jelzi a rossz helyet, a kék a jót, a piros pedig, hogy nincs benne.	#ffc000
+Cloudle	https://cloudle.app/	Gratulálok! Eljutottál a 100. pályához!!! Ezért jutalmat érdemelsz! De nem fogsz kapni :( És nem, nem ez az utolsó játék még.  Itt egy 5 napos időjárás-előrejelzést kell készítened Wordle-szerűen. Ha esetleg tudod, hogy mi a hivatalos előrejelzés a megadott helyen a megadott időre, akkor ez 1 tippből meglesz!	#ffc000
+Unlockle	https://wordgames.gg/unlockle	Oldd fel a kijelzőt egy 5 hosszú kóddal! A narancssárga és a zöld szín a tippek után azt jelenti, amit gondolnál, hogy jelent.	#ffc000
+Gamedle	https://www.gamedle.wtf/unlimited#	Találd ki melyik videójáték boxartja van pixelesítve neked!	#ffc000
+Battleshipple	https://battleshipple.com/	25 mezőből 3 egymás mellettin egy hajó van. Melyeken? Korlátlan tipped van.	#ffc000
+Chessle	https://jackli.gg/chessle/	Találd ki melyik volt az első 6 lépés a sakkjátszmában.	#ffc000
+Chessguessr	https://www.chessguessr.com/	Hogyan folytatódott a sakkjátszma? Ezek valóban lejátszott lépések.	#ffc000
+Concludle	https://tryhardguides.com/concludle/	Egyre több segítségből jöjj rá arra, amit ki kell találni!	#ffc000
+Factle	https://frontofficesports.com/trivia/factle/	Találd ki a top 5 dolgot valamilyen témában!	#ffc000
+Factle Sports	https://frontofficesports.com/trivia/factle-sports/	Olyan, mint a Factle, de kizárólag sport témájú kérdésekkel (gondoltad volna?)	#ffc000
+Birdle	https://www.play-birdle.com/	Birdle? Nem volt már ez egyszer? Vagy kétszer… Elég random, hogy pont egy "Birdle" nevű játék szerepel háromszor…. Na mindegy, itt a képek alapján kell kitalálni a madarat.	#ffc000
+Conexo	https://conexo.ws/en/daily	110. pálya!!! Már közel a vége (valószínűleg az órád alapján is)  Oszd a 16 szót 4 darab 4-es csoportba valamilyen szempontok alapján.	#ffc000
+Cardle	https://cardle.uk/	Milyen típusú autó van a képen?	#ffc000
+Moviedle	https://likewise.com/games/moviedle	Melyik film gyorsított verziója van lejátszva? Minden hibás tipp után 1 másodperccel tovább lesz játszva a film.	#ffc000
+CineNerdle	https://www.cinenerdle.app/	Melyik filmből származik a képkocka? Minden tipped után 1/9 részét fedi fel a játék a képnek.	#ffc000
+Cine2Nerdle	https://www.cinenerdle2.app/puzzles	Itt nem értem én sem mit kell. De ha már a végefelé vagyunk, azért feladom nektek. A megnyitás után az original gombra menj!	#ffc000
+Posterdle	https://likewise.com/games/posterdle	A játék úgyis leírja mit kell…	#ffc000
+NFLXdle	https://likewise.com/games/nflxdle	Itt is leírja. Bocsi, hogy ennyire összecsaptam ezt a részt, de nem gondoltam, hogy még bárki eljut ide.	#ffc000
+Bookdle	https://likewise.com/games/bookdle	Csak olvasd el azt a mondatot, ami oda van írva!	#ffc000
+Plotwords	https://plotwords.com/	Menj a play unlimited gombra! Utána valamilyen plotwordok alapján kell kitalálnod szavakat egy megadott témában. Remélhetőleg nem filmet kapsz, mivel abból már túl sok volt…	#ffc000
+Triplet	https://wordly.org/wordle-games/triplet	Ha ismered a SET nevű játékot, akkor ez könnyű lesz. Csak annyi a feladat, hogy találd meg az összes SET-et 3 percen belül. Ez tulajdonképpen miért is Wordle játék?	#ffc000
+Murdle	https://murdle.com/	120. játék… Ennek sosem lesz vége?  Itt egy rejtvényt kell kitöltened! Hajrá! Amúgy nem volt már egy másik Murdle úgy 110 pályával ezelőtt?	#ffc000
+Redactle	https://redactle.net/	Egy Wikipedia szócikket kell kitalálnod, de ki vannak belőle húzva a szavak. Ha betippelsz egy szót, ami szerepel a cikkben, akkor az onnantól már nem lesz kihúzva. A játék akkor ér véget, ha kitalálod mi a szócikk címe. Korlátlan tipped van.	#ffff00
+Kilordle	https://jonesnxt.github.io/kilordle/	Valódi tényleges, legutolsó pálya, tényleg-tényleg. 1000 darab 5-betűs szó párhuzamosan! Hajrá! (Ha egy szóból az összes helyről ismered már, hogy milyen betű van ott, a játék automatikusan kitaláltnak veszi.)	#ffffff
