@@ -195,7 +195,7 @@ export const embeddingsList: EmbeddingItem[] = [
   {
     link: "https://www.opensourcefeed.org/puzzles/decordle/?source=landing",
     text: "Ultimate párhuzamos Wordle teszt! 10 szó egyszerre! Sok sikert! Ez az utolsó ezek közül.",
-    color: "#00b050",
+    color: "#ffff00",
     title: "Decordle"
   },
   {
@@ -291,13 +291,13 @@ export const embeddingsList: EmbeddingItem[] = [
   {
     link: "https://wordleunlimitedgame.io/double-dabble",
     text: "Utolsó játék az alternatív szókitalálós részről! Itt párokban vannak a betűk, amiket tippelhetsz és a játék azt árulja el, hogy legalább az egyik a párból szerepel-e a szóban. A 32 betűkombináció közül, ami a tippedből kijöhet, legalább egynek értelmesnek kell lennie.",
-    color: "#ffff00",
+    color: "#00b050",
     title: "Double-Dabble"
   },
   {
     link: "https://www.sedecordle.com/?mode=free",
     text: "Emlékszel, amikor azt mondtam, hogy 10-nél több szót nem kell kitalálnod párhuzamosan… Nos hazudtam, itt 16-ot kell!!! De ígérem, ez már tényleg az utolsó.",
-    color: "#ff0000",
+    color: "#ffff00",
     title: "Sedecordle"
   },
   {
@@ -459,13 +459,13 @@ export const embeddingsList: EmbeddingItem[] = [
   {
     link: "https://nerdlegame.com/s/2d/level3?gp=&st=95",
     text: "Utolsó matekos pálya! Itt már az sincs jelezve, hogy a sor, vagy az oszlop jó-e.",
-    color: "#ffff00",
+    color: "#ff0000",
     title: "2D nerdle level 3"
   },
   {
     link: "https://duotrigordle.com/game/practice/normal",
     text: "Hát… Emlékszel, amikor megígértem, hogy 16 szónál több nem lesz párhuzamosan? Nos, keresztben volt az ujjam… Úgyhogy most 32 következik! HAHAHA!!! (ezek után biztosan nem fogod már elhinni, hogy ez tényleg az utolsó ezekből…) A játék megnyitása után kattints a \"Practice\", majd a \"Practice Duotrigordle\" gombra!",
-    color: "#4472c4",
+    color: "#ffff00",
     title: "Duotrigordle"
   },
   {
@@ -543,13 +543,13 @@ export const embeddingsList: EmbeddingItem[] = [
   {
     link: "https://citydle.com/",
     text: "90. PÁLYA!!! Úgy látom értesz a földrajzhoz is. Úgyhogy úgy érzem, hogy itt az idő, hogy befejezzük a földrajz részt ezzel a játékkal.  Ez a játék ugyanaz, mint a sima Wordle, csak városnevekkel.",
-    color: "#ffff00",
+    color: "#4472c4",
     title: "Citydle"
   },
   {
     link: "https://64ordle.au/?mode=free",
     text: "Na jó, talán túlzásnak hangzik, de a Sexaginta-quattuordle egy 64 szavas párhuzamos Wordle játék. Úgyis át fogod ugrani ezt, szóval fölösleges bemutatnom.",
-    color: "#ffc000",
+    color: "#ffff00",
     title: "Sexaginta-quattuordle"
   },
   {
@@ -729,13 +729,13 @@ export const embeddingsList: EmbeddingItem[] = [
   {
     link: "https://redactle.net/",
     text: "Egy Wikipedia szócikket kell kitalálnod, de ki vannak belőle húzva a szavak. Ha betippelsz egy szót, ami szerepel a cikkben, akkor az onnantól már nem lesz kihúzva. A játék akkor ér véget, ha kitalálod mi a szócikk címe. Korlátlan tipped van.",
-    color: "#ffff00",
+    color: "#ffc000",
     title: "Redactle"
   },
   {
     link: "https://jonesnxt.github.io/kilordle/",
     text: "Valódi tényleges, legutolsó pálya, tényleg-tényleg. 1000 darab 5-betűs szó párhuzamosan! Hajrá! (Ha egy szóból az összes helyről ismered már, hogy milyen betű van ott, a játék automatikusan kitaláltnak veszi.)",
-    color: "#ffffff",
+    color: "#ffff00",
     title: "Kilordle"
   }
 ];
