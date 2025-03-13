@@ -19,6 +19,7 @@ const CountdownTimer = () => {
   const [linkSwitchDurationSec, setLinkSwitchDurationSec] = useState(0);
   const [embedFadeOutSec, setEmbedFadeOutSec] = useState(0);
   const timerRef = useRef<HTMLDivElement>(null);
+  const secondRef = useRef<HTMLDivElement>(null);
   const [timerHeight, setTimerHeight] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentEmbedding = embeddingsList[currentIndex];
@@ -102,73 +103,121 @@ const CountdownTimer = () => {
           setDarkMode={setDarkMode}
           addSecondsToTimer={addSecondsToTimer}
           setFontSize={setFontSize}
-          isSetupMode={showForm}  // Add this prop
+          isSetupMode={showForm}
         />
 
-        <div ref={timerRef}>
-          <TimerDisplay
-            time={time}
-            isPaused={paused}
-            fontSize={fontSize}
-            marginBottom={marginBottom}
-            /*onClick={toggleTimer}*/
-          />
-
-        {showForm && <TimerSetupForm
-          onStart={processSetupFormSubmission} 
-        />}
-
-        {/* {!showForm && remainingSeconds > embedFadeOutSec-5 && (
-            <div className={`transition-opacity ease-out duration-4000 ${remainingSeconds < embedFadeOutSec ? 'opacity-0' : 'opacity-100'}`}>
-            <ContentEmbed 
-              links={links} 
-              animationPauseTime={linkSwitchDurationSec} 
-              timerHeight={timerHeight}
+        {showForm && (
+          <div ref={timerRef}>
+            <TimerDisplay
+              time={time}
+              isPaused={paused}
+              fontSize={fontSize}
+              marginBottom={marginBottom}
+              onClick={() => {}}
             />
+            <TimerSetupForm onStart={processSetupFormSubmission} />
+          </div>
+        )}
+
+        {!showForm && (
+          <>
+          <div ref={secondRef}>
+            {/* 3-column header layout */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              padding: '10px 20px',
+              width: '100%'
+            }}>
+              {/* Left column - Stats */}
+              <div style={{ 
+                flex: '1', 
+                textAlign: 'left',
+                fontSize: '1.1rem',
+                fontWeight: 'bold' 
+              }}>
+                <p style={{ margin: 0 }}>
+                  Sikeres játékok: {numberOfSuccess} db<br/>
+                  Sikertelen játékok: {currentIndex - numberOfSuccess} db
+                </p>
+              </div>
+              
+              {/* Middle column - Title */}
+              <div style={{ flex: '2', textAlign: 'center' }}>
+                <h1 style={{ margin: 0 }}>{currentIndex+1}. játék: {currentEmbedding.title}</h1>
+              </div>
+              
+              {/* Right column - Timer with smaller font */}
+              <div style={{ flex: '1', textAlign: 'right' }} ref={timerRef}>
+                <TimerDisplay
+                  time={time}
+                  isPaused={paused}
+                  fontSize={fontSize * 0.6} // Smaller font for timer
+                  marginBottom={0}
+                  onClick={() => {}}
+                />
+              </div>
             </div>
-        )} */}
-        {!showForm && <div>
-          <h1>{currentIndex+1}. játék: {currentEmbedding.title}</h1>
-          <Button 
-            variant="contained" 
-            onClick={() => handleNextEmbedding(true)}
-            color="success"
-          >
-            Sikerült a feladat
-          </Button>
-          <Button 
-            variant="contained" 
-            onClick={() => handleNextEmbedding(false)}
-            color="error"
-          >
-            Nem sikerült, vagy átugrom a pályát.
-          </Button>
-
-
-          <p>Eddig {numberOfSuccess} sikeres és {currentIndex - numberOfSuccess} sikertelen próbálkozásod volt.</p>
-
-          <p>{currentEmbedding.text}</p>
-
-          <p>Ha nem töltene be az oldal, akkor kattints ide: <a href
-          ={currentEmbedding.link}>{currentEmbedding.link}</a></p>
-        </div>}
-        </div>
-      
-        {!showForm &&
-        <div
-          style={{ 
-            height: `calc(100vh - ${timerHeight}px)`,
-          }}
-        >
-          <iframe 
-            src={currentEmbedding.link} 
-            width="100%"
-            height="100%"
-            title={currentEmbedding.title}
-          ></iframe>
-        </div>
-        }
-
+            
+            {/* Content area */}
+            <div style={{ padding: '0 20px', textAlign: 'center', fontSize: '1.4rem' }}>
+              {/* Description text */}
+              <p style={{ margin: '0px 0' }}>{currentEmbedding.text}</p>
+              
+              {/* External link */}
+              <p style={{ margin: '10px 0' }}>
+                Ha nem töltene be az oldal, akkor kattints ide: 
+                <a 
+                  href={currentEmbedding.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ marginLeft: '5px' }}
+                >
+                  {currentEmbedding.link}
+                </a>
+              </p>
+              
+              {/* Buttons */}
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: '20px 0' }}>
+                <Button 
+                  variant="contained" 
+                  onClick={() => handleNextEmbedding(true)}
+                  color="success"
+                  size="large"
+                >
+                  Sikerült a feladat
+                </Button>
+                <Button 
+                  variant="contained" 
+                  onClick={() => handleNextEmbedding(false)}
+                  color="error"
+                  size="large"
+                >
+                  Nem sikerült, vagy átugrom a pályát.
+                </Button>
+              </div>
+            </div>
+            </div>
+            
+            {/* Iframe container */}
+            <div
+              style={{ 
+                height: `calc(100vh - ${secondRef.current?.offsetHeight}px - 20px)`,
+                width: '100%',
+                border: 'none',
+              }}
+            >
+              <iframe 
+                src={currentEmbedding.link} 
+                width="100%"
+                height="100%"
+                style={{ border: 'none' }}
+                title={currentEmbedding.title}
+              ></iframe>
+            </div>
+            </>
+        )}
       </div>
     </ThemeProvider>
   );
