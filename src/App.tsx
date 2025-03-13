@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { TimerDisplay } from './components/TimerDisplay';
 import { SettingsMenu } from './components/SettingsMenu';
 import { TimerSetupForm } from './components/TimerSetupForm';
-import { ContentEmbed } from './components/ContentEmbed';
 import { useTimer } from './hooks/useTimer';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -15,17 +14,12 @@ const CountdownTimer = () => {
   const [fontSize, setFontSize] = useState(window.innerWidth < 768 ? 6 : 10);  // Smaller on mobile
   const [marginBottom, setMarginBottom] = useState(0);
   const [showForm, setShowForm] = useState(true);
-  const [links, setLinks] = useState<string[]>([]);
-  const [linkSwitchDurationSec, setLinkSwitchDurationSec] = useState(0);
-  const [embedFadeOutSec, setEmbedFadeOutSec] = useState(0);
   const timerRef = useRef<HTMLDivElement>(null);
   const secondRef = useRef<HTMLDivElement>(null);
-  const [timerHeight, setTimerHeight] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentEmbedding = embeddingsList[currentIndex];
   const [numberOfSuccess , setNumberOfSuccess] = useState(0);
   const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(90*60*1000);
-  const remainingSeconds = time.seconds+time.minutes*60+time.hours*3600;
 
   const processSetupFormSubmission = () => {
     setShowForm(false);
@@ -44,6 +38,12 @@ const CountdownTimer = () => {
 
   const handleNextEmbedding = (success: boolean) => {
     setNumberOfSuccess(success ? numberOfSuccess+1 : numberOfSuccess);
+    // Add 5 minutes
+    if (success) {
+      addSecondsToTimer(2.75*60);
+    } else {
+      addSecondsToTimer(-3.25*60);
+    }
     setCurrentIndex((prevIndex) => (prevIndex + 1));
   };
 
@@ -81,18 +81,6 @@ const CountdownTimer = () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [time]);
-
-  useEffect(() => {
-    const updateTimerHeight = () => {
-      if (timerRef.current) {
-        setTimerHeight(timerRef.current.offsetHeight);
-      }
-    };
-
-    updateTimerHeight();
-    window.addEventListener('resize', updateTimerHeight);
-    return () => window.removeEventListener('resize', updateTimerHeight);
-  }, [fontSize]); // Update when font size changes
 
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
