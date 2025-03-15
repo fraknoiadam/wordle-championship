@@ -10,17 +10,19 @@ def parse_table(input_text):
             title = row[0].strip()
             link = row[1].strip()
             text = row[2].strip().replace('"', '\\"')  # Escape double quotes
-            color = "#ffff00"  # Default color if not provided
-            if len(row) >= 4:
-                color = row[3].strip()
-            
+            color = row[3].strip()
+            noembedding = ""
+            if len(row) >= 5:
+                noembedding = row[4].strip()
+
             embeddings.append({
                 "title": title,
                 "link": link,
                 "text": text,
-                "color": color
+                "color": color,
+                "embedding": False if noembedding == "noembedding" else True
             })
-    
+
     return embeddings
 
 def format_typescript(embeddings):
@@ -29,6 +31,7 @@ def format_typescript(embeddings):
   text: string;
   color: string;
   title: string;
+  embedding: boolean;
 }
 
 export const embeddingsList: EmbeddingItem[] = [
@@ -44,7 +47,8 @@ export const embeddingsList: EmbeddingItem[] = [
     link: "{link}",
     text: "{text}",
     color: "{embedding['color']}",
-    title: "{title}"
+    title: "{title}",
+    embedding: {str(embedding['embedding']).lower()}
   }},
 """
     

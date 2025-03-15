@@ -10,7 +10,7 @@ import { lightTheme, darkTheme } from './theme';
 import { embeddingsList } from './data/embeddings';
 
 const CountdownTimer = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [fontSize, setFontSize] = useState(window.innerWidth < 768 ? 6 : 10);  // Smaller on mobile
   const [marginBottom, setMarginBottom] = useState(0);
   const [showForm, setShowForm] = useState(true);
@@ -19,7 +19,7 @@ const CountdownTimer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentEmbedding = embeddingsList[currentIndex];
   const [numberOfSuccess , setNumberOfSuccess] = useState(0);
-  const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(90*60*1000);
+  const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(60*60*1000);
 
   const processSetupFormSubmission = () => {
     setShowForm(false);
@@ -85,7 +85,7 @@ const CountdownTimer = () => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <div className="h-screen w-screen overflow-hidden" style={{ backgroundColor: currentEmbedding.color }}>
+      <div className="w-screen overflow-hidden" style={{ backgroundColor: currentEmbedding.color }}>
         <SettingsMenu
           darkMode={darkMode}
           setDarkMode={setDarkMode}
@@ -155,7 +155,7 @@ const CountdownTimer = () => {
               
               {/* External link */}
               <p style={{ margin: '10px 0' }}>
-                Ha nem töltene be az oldal, akkor kattints ide: 
+              {currentEmbedding.embedding ? 'Ha nem töltene be az oldal, akkor kattints ide:' : 'Az alábbi játék elkezdéséhez kattints ide:'}
                 <a 
                   href={currentEmbedding.link} 
                   target="_blank" 
@@ -189,13 +189,14 @@ const CountdownTimer = () => {
             </div>
             
             {/* Iframe container */}
-            <div
+            {currentEmbedding.embedding && (
+              <div
               style={{ 
                 height: `calc(100vh - ${secondRef.current?.offsetHeight}px - 20px)`,
                 width: '100%',
                 border: 'none',
               }}
-            >
+              >
               <iframe 
                 src={currentEmbedding.link} 
                 width="100%"
@@ -203,7 +204,7 @@ const CountdownTimer = () => {
                 style={{ border: 'none' }}
                 title={currentEmbedding.title}
               ></iframe>
-            </div>
+            </div>)}
             </>
         )}
       </div>
