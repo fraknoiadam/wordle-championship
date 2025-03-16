@@ -13,7 +13,8 @@ export const TimerSetupForm = ({ onStart }: any) => {
         <div className="mb-4">
             <p className="mb-2">Sziasztok! Üdvözlünk titeket a Bolyai Wordle bajnokságon! Az alábbiakban felsorolunk pár fontos tudnivalót a bajnokságról:</p>            
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Minden pályán egy különböző Wordle-spinoff játékkal játszhattok majd, melyek megoldására 1 órát kaptok kezdéskor.</li>
+              <li>Minden pályán egy különböző Wordle-spinoff játékkal játszhattok majd, melyek megoldására 1,5 órát kaptok kezdéskor.</li>
+              <li>Inkognitó módot használj a böngészőben mindenképp. Illetve semmiképp ne zárd be az oldalt, mert azzal elvesznek az addigi eredményeid.</li>
               <li>A játék kényelme érdekében azt javasoljuk, hogy ezt az oldalt 50-67%-os nagyításban használjátok.</li>
               <li>Ha egy pálya sikerült, akkor a zöld színű gombra kattintva tudod ezt jelezni. Ez továbbít a következő játékra és 2 perc 45 másodperccel növeli a hátralévő idődet.</li>
               <li>Ha egy pálya nem sikerült, vagy át szeretnéd ugrani, akkor a piros gombra kattintva át tudsz ugrani rajta, ez viszont 3 perc 15 másodperccel csökkenti a hátralévő idődet.</li>

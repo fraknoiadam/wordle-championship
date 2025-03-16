@@ -11,16 +11,35 @@ import { embeddingsList } from './data/embeddings';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import CancelIcon from '@mui/icons-material/Cancel';
+
+// Define a type for a problem attempt
+interface ProblemAttempt {
+  id: number;
+  title: string;
+  success: boolean;
+  timestamp: Date;
+}
 
 const CountdownTimer = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [fontSize, setFontSize] = useState(window.innerWidth < 768 ? 6 : 10);
   const [marginBottom, setMarginBottom] = useState(0);
   const [showForm, setShowForm] = useState(true);
+  const [startTime, setStartTime] = useState<Date | null>(null);
   const timerRef = useRef<HTMLDivElement>(null);
   const secondRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [numberOfSuccess, setNumberOfSuccess] = useState(0);
+  // Track all problem attempts with timestamps
+  const [problemAttempts, setProblemAttempts] = useState<ProblemAttempt[]>([]);
   const { time, paused, addSecondsToTimer, toggleTimer, isTimeUp } = useTimer(90*60*1000);
   
   // Check if the game is finished
@@ -36,6 +55,7 @@ const CountdownTimer = () => {
     // Start the timer when form is submitted
     if (paused) {
       toggleTimer();
+      setStartTime(new Date());
     }
     
     // Request fullscreen on form submission
@@ -48,12 +68,23 @@ const CountdownTimer = () => {
 
   const handleNextEmbedding = (success: boolean) => {
     setNumberOfSuccess(success ? numberOfSuccess+1 : numberOfSuccess);
-    // Add 5 minutes
+    // Add time based on success/failure
     if (success) {
       addSecondsToTimer(2.75*60);
     } else {
       addSecondsToTimer(-3.25*60);
     }
+    
+    // Record this attempt with timestamp
+    setProblemAttempts(prev => [
+      ...prev, 
+      {
+        id: currentIndex + 1,
+        title: currentEmbedding.title,
+        success,
+        timestamp: new Date()
+      }
+    ]);
     
     // Increment the current index
     const nextIndex = currentIndex + 1;
@@ -109,6 +140,46 @@ const CountdownTimer = () => {
     return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
+  // Format date to HH:MM:SS
+  const formatTime = (date: Date) => {
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  };
+
+  // Calculate elapsed time since start
+  const getElapsedTime = (timestamp: Date) => {
+    if (!startTime) return '00:00:00';
+    
+    const elapsedMs = timestamp.getTime() - startTime.getTime();
+    const hours = Math.floor(elapsedMs / 3600000);
+    const minutes = Math.floor((elapsedMs % 3600000) / 60000);
+    const seconds = Math.floor((elapsedMs % 60000) / 1000);
+    
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  // Calculate time spent on a problem
+  const getTimeSpent = (attempt: ProblemAttempt, index: number) => {
+    // For the first problem, calculate from start time
+    if (index === 0) {
+      if (!startTime) return '00:00:00';
+      const elapsedMs = attempt.timestamp.getTime() - startTime.getTime();
+      const hours = Math.floor(elapsedMs / 3600000);
+      const minutes = Math.floor((elapsedMs % 3600000) / 60000);
+      const seconds = Math.floor((elapsedMs % 60000) / 1000);
+      
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else {
+      // For subsequent problems, calculate from previous problem time
+      const previousAttempt = problemAttempts[index - 1];
+      const elapsedMs = attempt.timestamp.getTime() - previousAttempt.timestamp.getTime();
+      const hours = Math.floor(elapsedMs / 3600000);
+      const minutes = Math.floor((elapsedMs % 3600000) / 60000);
+      const seconds = Math.floor((elapsedMs % 60000) / 1000);
+      
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+  };
+
   // Render ending screen
   const renderEndingScreen = () => {
     return (
@@ -117,45 +188,97 @@ const CountdownTimer = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
-          height: '100vh',
-          padding: 4,
-          textAlign: 'center'
+          justifyContent: 'flex-start',
+          minHeight: '100vh',
+          padding: 4
         }}
       >
         <Paper
           elevation={3}
           sx={{
             padding: 4,
-            maxWidth: 800,
+            maxWidth: 1000,
+            width: '100%',
             backgroundColor: 'background.paper',
-            borderRadius: 2
+            borderRadius: 2,
+            marginBottom: 4
           }}
         >
           {isTimeUp ? (
-            <Typography variant="h2" component="h1" gutterBottom>
+            <Typography variant="h2" component="h1" gutterBottom align="center">
               Lejárt az időd.
             </Typography>
           ) : (
-            <Typography variant="h2" component="h1" gutterBottom>
+            <Typography variant="h2" component="h1" gutterBottom align="center">
               Végigértél a játékon. Gratulálok!
             </Typography>
           )}
 
           {isTimeUp ? (
-            <Typography variant="h5" gutterBottom>
-              Végül a {currentIndex + 1}. pályáig jutottál, melyből {numberOfSuccess} játékot teljesítettél sikeresen.
+            <Typography variant="h5" gutterBottom align="center">
+              Végül a {currentIndex}. pályáig jutottál, melyből {numberOfSuccess} játékot teljesítettél sikeresen.
             </Typography>
           ) : (
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h5" gutterBottom align="center">
               Végül a játék {embeddingsList.length} pályájából {numberOfSuccess} játékot teljesítettél sikeresen 
               és {formatRemainingTime()} időd maradt még.
             </Typography>
           )}
 
-          <Typography variant="h6" sx={{ marginTop: 4 }}>
+          <Typography variant="h6" sx={{ marginTop: 4, marginBottom: 4 }} align="center">
             Köszönjük, hogy részt vettél a bajnokságon, reméljük jól érezted magadat!
           </Typography>
+          
+          {/* Detailed results table */}
+          <Typography variant="h5" gutterBottom align="center" sx={{ mt: 4 }}>
+            Részletes eredmények
+          </Typography>
+          
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Sorszám</TableCell>
+                  <TableCell>Játék neve</TableCell>
+                  <TableCell>Eredmény</TableCell>
+                  <TableCell>Időpont</TableCell>
+                  <TableCell>Eltelt idő</TableCell>
+                  <TableCell>Felhasznált idő</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {problemAttempts.map((attempt, index) => (
+                  <TableRow 
+                    key={attempt.id}
+                    sx={{ 
+                      backgroundColor: attempt.success 
+                        ? 'rgba(76, 175, 80, 0.1)' 
+                        : 'rgba(244, 67, 54, 0.1)' 
+                    }}
+                  >
+                    <TableCell>{attempt.id}</TableCell>
+                    <TableCell>{attempt.title}</TableCell>
+                    <TableCell>
+                      {attempt.success ? (
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                          <CheckCircleIcon color="success" sx={{ mr: 1 }} />
+                          Sikeres
+                        </Box>
+                      ) : (
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                          <CancelIcon color="error" sx={{ mr: 1 }} />
+                          Sikertelen
+                        </Box>
+                      )}
+                    </TableCell>
+                    <TableCell>{formatTime(attempt.timestamp)}</TableCell>
+                    <TableCell>{getElapsedTime(attempt.timestamp)}</TableCell>
+                    <TableCell>{getTimeSpent(attempt, index)}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Paper>
       </Box>
     );
