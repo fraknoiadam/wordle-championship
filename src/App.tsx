@@ -19,7 +19,7 @@ const CountdownTimer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentEmbedding = embeddingsList[currentIndex];
   const [numberOfSuccess , setNumberOfSuccess] = useState(0);
-  const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(60*60*1000);
+  const { time, paused, addSecondsToTimer, toggleTimer } = useTimer(90*60*1000);
 
   const processSetupFormSubmission = () => {
     setShowForm(false);
@@ -115,7 +115,7 @@ const CountdownTimer = () => {
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'center',
-              padding: '10px 20px',
+              padding: '10px 20px 5px', // Reduced bottom padding
               width: '100%'
             }}>
               {/* Left column - Stats */}
@@ -134,26 +134,6 @@ const CountdownTimer = () => {
               {/* Middle column - Title */}
               <div style={{ flex: '2', textAlign: 'center' }}>
                 <h1 style={{ margin: 0 }}>{currentIndex+1}. játék: {currentEmbedding.title}</h1>
-              </div>
-              
-              {/* Right column - Timer with smaller font */}
-              <div style={{ flex: '1', textAlign: 'right' }} ref={timerRef}>
-                <TimerDisplay
-                  time={time}
-                  isPaused={paused}
-                  fontSize={fontSize * 0.6} // Smaller font for timer
-                  marginBottom={0}
-                  onClick={() => {}}
-                />
-              </div>
-            </div>
-            
-            {/* Content area */}
-            <div style={{ padding: '0 20px', textAlign: 'center', fontSize: '1.4rem' }}>
-              {/* Description text */}
-              <p style={{ margin: '0px 0' }}>{currentEmbedding.text}</p>
-              
-              {/* External link */}
               <p style={{ margin: '10px 0' }}>
               {currentEmbedding.embedding ? 'Ha nem töltene be az oldal, akkor kattints ide:' : 'Az alábbi játék elkezdéséhez kattints ide:'}
                 <a 
@@ -165,9 +145,38 @@ const CountdownTimer = () => {
                   {currentEmbedding.link}
                 </a>
               </p>
+              </div>
+
               
-              {/* Buttons */}
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: '20px 0' }}>
+              {/* Right column - Timer with smaller font */}
+              <div style={{ flex: '1', textAlign: 'right' }} ref={timerRef}>
+                <TimerDisplay
+                  time={time}
+                  isPaused={paused}
+                  fontSize={fontSize * 0.4} // Smaller font for timer
+                  marginBottom={0}
+                  onClick={() => {}}
+                />
+              </div>
+            </div>
+            
+            {/* Content area - reduced top margin */}
+            <div style={{ 
+              //padding: '0 0px', 
+              textAlign: 'center', 
+              fontSize: '1.2rem',
+              //marginTop: '-15px' // Add negative margin to bring content closer to title
+            }}>
+              {/* Description text */}
+              <p style={{ margin: '0px 0' }}>{currentEmbedding.text}</p>
+              
+              {/* Buttons - adjusted top margin */}
+              <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                gap: '20px', 
+                margin: '10apx 0' 
+              }}>
                 <Button 
                   variant="contained" 
                   onClick={() => handleNextEmbedding(true)}

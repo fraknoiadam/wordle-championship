@@ -43,7 +43,7 @@ export const embeddingsList: EmbeddingItem[] = [
     embedding: true
   },
   {
-    link: "https://wordgames.gg/letterle",
+    link: "https://edjefferson.com/letterle/",
     text: "Itt pedig egy 1 betűs szót… De korlátlan tippből!",
     color: "#ffff00",
     title: "Letterle",
@@ -54,18 +54,18 @@ export const embeddingsList: EmbeddingItem[] = [
     text: "Kicsit változtassunk a formulán! Ebben a verzióban nem tudod hány betűből áll a megfejtés. A megfejtésben a szó előtt és után is lehetnek szóközök, ezek szintén tippelhető karakterek, melyekről az oldal elárulja ugyanúgy, hogy szerepelnek-e a megfejtésben és ha igen, akkor hol.",
     color: "#ffff00",
     title: "Shuntle",
-    embedding: false
+    embedding: true
   },
   {
     link: "https://jealousmarkup.xyz/szofejto/",
     text: "Vagy inkább szó estét? Lényegében Wordle, csak magyarul. A piros szín azt jelzi, ha egy betű szerepel a szóban csak máshol.",
     color: "#ffff00",
     title: "Szó reggelt!",
-    embedding: true
+    embedding: false
   },
   {
     link: "https://szozat.miklosdanka.com/",
-    text: "Olyan, mint a Szó reggelt!, de itt a több karakterből álló betűk csak egy helyet foglalnak csak el, illetve eggyel kevesebb tipped van.",
+    text: "Olyan, mint a Szó reggelt!, de itt a több karakterből álló betűk csak egy helyet foglalnak csak el, illetve eggyel több tipped van.",
     color: "#ffff00",
     title: "Szózat",
     embedding: true
@@ -93,7 +93,7 @@ export const embeddingsList: EmbeddingItem[] = [
   },
   {
     link: "https://unwordle.org/?daily=1",
-    text: "Olyan, mint a Reversle, csak nehezebb. Itt még arra is kell figyelned, hogy minden tipp egy olyan szó legyen, ami az őt megelőző információk alapján akár a megfjtés is lehetett volna. Kérlek menj az Unlimited verzióban a Normalre!",
+    text: "Olyan, mint a Reversle, csak nehezebb. Itt még arra is kell figyelned, hogy minden tipp egy olyan szó legyen, ami az őt megelőző információk alapján akár a megfejtés is lehetett volna. Kérlek menj az Unlimited verzióban a Normalre!",
     color: "#ffff00",
     title: "Unwordle",
     embedding: true
@@ -107,7 +107,7 @@ export const embeddingsList: EmbeddingItem[] = [
   },
   {
     link: "https://xordle.org/",
-    text: "Na, szóval ezt nehéz lesz elmagyarázni… Szóval itt is két kitalálandó szó van, de ezekre a játék párhuzamosan válaszol. Lényegében azt jeleníti meg, hogy van-e olyan szó, amiben egy adott betű szerepel. Tehát ha például az egyik szóban nem szerepel E, de a másikban igen és a tippedben is, akkor a játék narancssárgát, vagy zöldet fog jelezni (attól függően, hogy a helye jó-e). Ha az egyik szót kitaláltad, kapsz egy extra tipplehetőséget és onnantól a játék úgy megy tovább, mint a sima Wordle.",
+    text: "Na, szóval ezt nehéz lesz elmagyarázni… Szóval itt is két kitalálandó szó van, de ezekre a játék párhuzamosan válaszol. Lényegében azt jeleníti meg, hogy van-e olyan szó, amiben egy adott betű szerepel. Tehát ha például az egyik szóban nem szerepel E, de a másikban igen és a tippedben is, akkor a játék narancssárgát, vagy zöldet fog jelezni (attól függően, hogy a helye jó-e). Ha az egyik szót kitaláltad, kapsz egy extra tipplehetőséget és onnantól a játék úgy megy tovább, mint a sima Wordle. Az oldal tetején már az elején meg van adva egy szó, amire a játék már válaszolt.",
     color: "#ffff00",
     title: "Xordle",
     embedding: true
@@ -117,18 +117,18 @@ export const embeddingsList: EmbeddingItem[] = [
     text: "Az eredeti Wordle-höz nagyon hasonlít, de itt nem látod a korábbi tippjeidet.",
     color: "#ffff00",
     title: "Invisidle",
-    embedding: false
+    embedding: true
   },
   {
     link: "https://www.fuedle.com/riddlele/unlimited",
     text: "Ebben a Wordle-játékban meg van adva egy riddle és annak a megfejtését kell kitalálni.",
     color: "#ffff00",
     title: "Riddlele",
-    embedding: true
+    embedding: false
   },
   {
     link: "https://wordly.org/wordle-games/adoptle",
-    text: "Olyan, mint a Wordle (továbbra is… az elrugaszkodott verziók még messze vannak), a fő különbség az, hogy a megfejtés adoptálható. Többnyire egy állat tulajdonneve.",
+    text: "Olyan, mint a Wordle (továbbra is…) az elrugaszkodott verziók még messze vannak), a fő különbség az, hogy a megfejtés adoptálható. Többnyire egy állat tulajdonneve.",
     color: "#ffff00",
     title: "Adoptle",
     embedding: true
@@ -184,7 +184,7 @@ export const embeddingsList: EmbeddingItem[] = [
   },
   {
     link: "https://fibble.xyz/?unlimited",
-    text: "Itt pedig soronként egy betűről hazudik neked a játék, a zászlókkal meg tudod jelölni soronként, hogy szerinted melyik volt a hazugság. Tulajdonképpen ki találja ki ezeket?",
+    text: "Itt pedig soronként egy betűről hazudik neked a játék, a zászlókkal meg tudod jelölni soronként, hogy szerinted melyik volt a hazugság. Tulajdonképpen ki találja ki ezeket? Az oldal tetején már az elején meg van adva egy szó, amire a játék már válaszolt.",
     color: "#ffff00",
     title: "Fibble",
     embedding: true
@@ -207,7 +207,7 @@ export const embeddingsList: EmbeddingItem[] = [
     link: "https://sixordle.com/practice",
     text: "Ismét 4 szót kell kitalálnod párhuzamosan, de ezek 6 betűsek.",
     color: "#ffff00",
-    title: "SIxordle",
+    title: "Sixordle",
     embedding: false
   },
   {
@@ -275,7 +275,7 @@ export const embeddingsList: EmbeddingItem[] = [
   },
   {
     link: "https://warmle.org/?unlimited",
-    text: "Ebben a játékban azt tudod a betippelt szó betűiről, hogy azok az a megfejtésben azonos helyen lévő betűkhöz közel vannak-e az ábécében. Arról nincs infód, hogy egy adott betű más pozícióba jó-e.",
+    text: "Ebben a játékban azt tudod a betippelt szó betűiről, hogy azok az a megfejtésben azonos helyen lévő betűkhöz közel vannak-e az ábécében. Arról nincs infód, hogy egy adott betű más pozícióba jó-e. Az oldal tetején már az elején meg van adva egy szó, amire a játék már válaszolt.",
     color: "#00b050",
     title: "Warmle",
     embedding: true
