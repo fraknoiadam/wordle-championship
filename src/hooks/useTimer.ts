@@ -21,6 +21,7 @@ export const useTimer = (initialTotalMs: number) => {
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [pauseStart, setPauseStart] = useState<Date>(new Date());
   const [totalPauseMs, setTotalPauseMs] = useState(0);
+  const [isTimeUp, setIsTimeUp] = useState(false);
   const intervalRef = useRef<number | null>(null);
 
   const calculateRemainingMs = (): number => {
@@ -41,7 +42,15 @@ export const useTimer = (initialTotalMs: number) => {
 
   useEffect(() => {
     const updateTime = () => {
-      setTime(secondsToTimerState(calculateRemainingMs()));
+      const remainingMs = calculateRemainingMs();
+      setTime(secondsToTimerState(remainingMs));
+      if (remainingMs <= 0) {
+        setPaused(true);
+        setIsTimeUp(true);
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current);
+        }
+      }
     };
 
     // Update immediately
@@ -77,5 +86,5 @@ export const useTimer = (initialTotalMs: number) => {
     });
   };
 
-  return { time, paused, addSecondsToTimer, toggleTimer };
+  return { time, paused, addSecondsToTimer, toggleTimer, isTimeUp };
 };
